@@ -1,31 +1,29 @@
-// import React from 'react';
-// import {expect} from 'chai';
-// import {mount} from 'enzyme';
-// import i18next from 'i18next';
-// import {I18nextProvider} from 'react-i18next';
-// import App from './App';
-// import translation from '../../assets/locale/messages_en.json';
+import React from 'react';
+import {expect} from 'chai';
+import {mount} from 'enzyme';
+import App from './App';
 
-// const i18nData = {
-//   lng: 'en',
-//   keySeparator: '$',
-//   resources: {
-//     en: {translation}
-//   }
-// };
+let wrapper;
+const changeText = text => wrapper.find('[data-hook="inputVal"]')
+      .simulate('change', {target: {value: text}});
+const minus = () => wrapper.find('[data-hook="minus"]').simulate('click');
+const render = x => mount(
+  x,
+  {attachTo: document.createElement('div')}
+);
+const equal = () => wrapper.find('[data-hook="equal"]').simulate('click');
+const getInputVal = () => wrapper.find('[data-hook="inputVal"]').get(0).value;
 
-// describe('App', () => {
-//   let wrapper;
+describe('App', () => {
 
-//   afterEach(() => wrapper.detach());
+  afterEach(() => wrapper.detach());
 
-//   it('renders a title correctly', () => {
-//     wrapper = mount(
-//       <I18nextProvider i18n={i18next.init(i18nData)}>
-//         <App/>
-//       </I18nextProvider>,
-//       {attachTo: document.createElement('div')}
-//     );
-//     expect(wrapper.find('h2').length).to.eq(1);
-//   });
-// });
+  it('should calculate "minus"', () => {
+    wrapper = render(<App/>);
+    changeText('5');
+    minus();
+    changeText('3');
+    equal();
+    expect(getInputVal()).to.equal('2');
+  });
+});

@@ -12,10 +12,11 @@ const axiosInstance = wixAxiosInstanceConfig(axios, {
 describe('When rendering', () => {
   beforeAndAfter();
 
-  it('should display a title', async () => {
-    const url = app.getUrl('/');
+  it('should save calcs', async () => {
+    const url = app.getUrl('/api/calcs');
+    await axiosInstance.post(url, {calc: '5'});
     const response = await axiosInstance.get(url);
 
-    expect(response.data).to.contain('Wix Full Stack Project Boilerplate');
+    expect(response.data).to.eql(['5']);
   });
 });
