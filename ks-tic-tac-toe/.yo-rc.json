@@ -1,0 +1,9 @@
+{
+  "generator-wix-js": {
+    "promptValues": {
+      "authorName": "Yaniv Efraim",
+      "authorEmail": "yanivef@wix.com",
+      "groupId": "com.wixpress.infra"
+    }
+  }
+}
