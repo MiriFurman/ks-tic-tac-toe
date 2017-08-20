@@ -2,7 +2,7 @@
 
 ### Getting started
 
-1. Clone this repo.
+1. Clone / Fork this repo.
 2. cd ks-calculator-tdd
 3. `npm i` / `yarn`
 4. `npm test` / `yarn test`
