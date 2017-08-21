@@ -1,18 +1,24 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import './Board.scss';
 
 class Board extends Component {
   constructor() {
     super();
-    this.state = {board: [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]};
+    this.state = {board: [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']], player: 'O'};
   }
 
   onCellClicked(rowIdx, colIdx) {
+    const player = this.state.player === 'O' ? 'X' : 'O';
     const board = this.state.board
       .map((row, rowI) =>
-        rowI !== rowIdx ? row : row.map((col, colI) => colI !== colIdx ? col : 'X'));
+        rowI !== rowIdx ? row : row.map((col, colI) => colI !== colIdx ? col : player));
 
-    this.setState({board});
+    if (board[0].every(c => c === 'X')) {
+      this.props.onGameWon();
+    }
+
+    this.setState({board, player});
   }
   render() {
     return (<table>
@@ -24,5 +30,9 @@ class Board extends Component {
     </table>);
   }
 }
+
+Board.propTypes = {
+  onGameWon: PropTypes.func
+};
 
 export default Board;

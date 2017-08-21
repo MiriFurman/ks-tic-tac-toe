@@ -3,12 +3,17 @@ import Board from '../Board';
 import PropTypes from 'prop-types';
 
 class Game extends Component {
+  constructor() {
+    super();
+    this.state = {winner: ''};
+  }
   render() {
     return (
       <div>
         <span data-hook="player1">{this.props.player1}</span>
         <span data-hook="player2">{this.props.player2}</span>
-        <Board/>
+        <Board onGameWon={() => this.setState({winner: true})}/>
+        {this.state.winner && <div data-hook="winner-message">{`${this.props.player1} won!`}</div>}
       </div>);
   }
 }
