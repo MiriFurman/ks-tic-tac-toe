@@ -20,7 +20,7 @@ Add a component test for "Game" for testing that Player 2 won the game
 
    # Bonus tasks
    
-* Add a test for input fields validation
 * Add a test for hiding registration during game
+* Add a test for input fields validation
 * Prevent clicking again on clicked cell
 * Add red indicator for next player
