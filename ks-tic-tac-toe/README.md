@@ -13,3 +13,14 @@ Implement an e2e for player1 wins the game
 * pass the test naively => should display the message without any conditions
 * add additional expect that the winning message is not visible before first player actually won
 * implement logic for naive winning (first row of ‘X’)
+
+   # Task 3
+   
+Add a component test for "Game" for testing that Player 2 won the game
+
+   # Bonus tasks
+   
+* Add a test for input fields validation
+* Add a test for hiding registration during game
+* Prevent clicking again on clicked cell
+* Add red indicator for next player
