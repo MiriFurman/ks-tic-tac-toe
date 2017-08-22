@@ -18,7 +18,7 @@ describe('Game', () => {
     const player1 = 'player1';
     const player2 = 'player2';
 
-    wrapper = render(<Game player1={player1} player2={player2}/>);
+    wrapper = render(<Game onGameWon={() => {}} player1={player1} player2={player2}/>);
     clickCellAt(3);
     clickCellAt(0);
     clickCellAt(4);

@@ -11,6 +11,10 @@ module.exports = (app, context) => {
   app.use(wixExpressCsrf());
   app.use(wixExpressRequireHttps);
 
+  app.post('/api/leaderboard', (req, res) => res.end());
+
+  app.get('/api/leaderboard', (req, res) => res.send([{name: 'Shilo', score: 1}]));
+
   app.get('/', wrapAsync(async (req, res) => {
     const templatePath = './src/index.ejs';
     const data = {title: 'Wix Full Stack Project Boilerplate'};

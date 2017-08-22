@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Board.scss';
 
 export const getGameStatus = board =>
-  (board[0][0] === board[0][1] && board[0][1] === board[0][2]) && board[0][0];
+  (board[0][0] === board[0][1] && board[0][1] === board[0][2] && board[0][0] !== ' ') && board[0][0];
 
 class Board extends Component {
   constructor() {

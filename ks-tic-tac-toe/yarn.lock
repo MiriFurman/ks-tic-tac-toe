@@ -2261,13 +2261,9 @@ di@^0.0.1:
   version "0.0.1"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/di/-/di-0.0.1.tgz#806649326ceaa7caa3306d75d985ea2748ba913c"
 
-diff@3.2.0:
+diff@3.2.0, diff@^3.1.0, diff@^3.2.0:
   version "3.2.0"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/diff/-/diff-3.2.0.tgz#c9ce393a4b7cbd0b058a725c93df299027868ff9"
-
-diff@^3.1.0, diff@^3.2.0:
-  version "3.3.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/diff/-/diff-3.3.0.tgz#056695150d7aa93237ca7e378ac3b1682b7963b9"
 
 diffie-hellman@^5.0.0:
   version "5.0.2"
@@ -5374,7 +5370,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@4.17.4, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.1.0, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.8.0, lodash@~4.17.0, lodash@~4.17.4:
+lodash@4.17.4, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.1.0, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.8.0, lodash@~4.17.0, lodash@~4.17.2, lodash@~4.17.4:
   version "4.17.4"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -5385,10 +5381,6 @@ lodash@^3.8.0:
 lodash@~1.0.1:
   version "1.0.2"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/lodash/-/lodash-1.0.2.tgz#8f57560c83b59fc270bd3d561b690043430e2551"
-
-lodash@~4.9.0:
-  version "4.9.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/lodash/-/lodash-4.9.0.tgz#4c20d742f03ce85dc700e0dd7ab9bcab85e6fc14"
 
 log-symbols@^1.0.2:
   version "1.0.2"
@@ -5811,18 +5803,19 @@ no-case@^2.2.0:
   dependencies:
     lower-case "^1.1.1"
 
-nock@^8.0.0:
-  version "8.2.1"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/nock/-/nock-8.2.1.tgz#64cc65e1bdd3893f58cba7e1abfdc38f40f0364a"
+nock@^9.0.14:
+  version "9.0.14"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/nock/-/nock-9.0.14.tgz#2211550253173ce298bcd89fca825e83813ca72b"
   dependencies:
     chai ">=1.9.2 <4.0.0"
     debug "^2.2.0"
     deep-equal "^1.0.0"
     json-stringify-safe "^5.0.1"
-    lodash "~4.9.0"
+    lodash "~4.17.2"
     mkdirp "^0.5.0"
     propagate "0.4.0"
     qs "^6.0.2"
+    semver "^5.3.0"
 
 node-fetch@1.6.3, node-fetch@^1.0.1, node-fetch@^1.5.1:
   version "1.6.3"
@@ -9054,7 +9047,7 @@ wix-errors@~1.0.171:
   dependencies:
     http-status-codes "1.1.6"
 
-wix-eventually@~1.0.326:
+wix-eventually@^1.0.327, wix-eventually@~1.0.326:
   version "1.0.327"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/wix-eventually/-/wix-eventually-1.0.327.tgz#6c45e0baebdec8c01fe1d014d6747f91ed285409"
   dependencies:
@@ -9433,16 +9426,9 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-ws@1.1.2:
+ws@1.1.2, ws@^1.0.1:
   version "1.1.2"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/ws/-/ws-1.1.2.tgz#8a244fa052401e08c9886cf44a85189e1fd4067f"
-  dependencies:
-    options ">=0.0.5"
-    ultron "1.0.x"
-
-ws@^1.0.1:
-  version "1.1.4"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/ws/-/ws-1.1.4.tgz#57f40d036832e5f5055662a397c4de76ed66bf61"
   dependencies:
     options ">=0.0.5"
     ultron "1.0.x"
