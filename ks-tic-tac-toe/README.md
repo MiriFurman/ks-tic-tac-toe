@@ -24,3 +24,6 @@ Add a component test for "Game" for testing that Player 2 won the game
 * Add a test for input fields validation
 * Prevent clicking again on clicked cell
 * Add red indicator for next player
+
+   # Task 4
+* Add unit tests for all scenarios 
