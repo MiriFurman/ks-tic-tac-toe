@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import './Board.scss';
 
-export const isGameWon = board =>
+export const getGameStatus = board =>
   (board[0][0] === board[0][1] && board[0][1] === board[0][2]) && board[0][0];
 
 class Board extends Component {
@@ -17,7 +17,7 @@ class Board extends Component {
       .map((row, rowI) =>
         rowI !== rowIdx ? row : row.map((col, colI) => colI !== colIdx ? col : player));
 
-    if (isGameWon(board)) {
+    if (getGameStatus(board)) {
       this.props.onGameWon(player);
     }
 
