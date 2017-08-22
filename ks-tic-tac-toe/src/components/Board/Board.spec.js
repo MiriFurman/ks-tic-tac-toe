@@ -10,7 +10,7 @@ describe('Board', () => {
 
   it('should have "X" and "O" clicked interchangeably', () => {
     wrapper = mount(
-      <Board/>, {attachTo: document.createElement('div')}
+      <Board onGameWon={() => {}}/>, {attachTo: document.createElement('div')}
     );
     wrapper.find('[data-hook="board-cell"]').at(0).simulate('click');
     expect(wrapper.find('[data-hook="board-cell"]').at(0).text()).to.equal('X');
