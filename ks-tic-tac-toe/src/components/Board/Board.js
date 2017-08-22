@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import './Board.scss';
 
+export const isGameWon = board =>
+  (board[0][0] === board[0][1] && board[0][1] === board[0][2]) && board[0][0];
+
 class Board extends Component {
   constructor() {
     super();
@@ -14,8 +17,8 @@ class Board extends Component {
       .map((row, rowI) =>
         rowI !== rowIdx ? row : row.map((col, colI) => colI !== colIdx ? col : player));
 
-    if (board[0].every(c => c === 'X')) {
-      this.props.onGameWon();
+    if (isGameWon(board)) {
+      this.props.onGameWon(player);
     }
 
     this.setState({board, player});

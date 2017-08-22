@@ -1,7 +1,7 @@
 import React from 'react';
 import {expect} from 'chai';
 import {mount} from 'enzyme';
-import Board from './Board';
+import Board, {getGameStatus} from './Board';
 
 describe('Board', () => {
   let wrapper;
@@ -16,5 +16,15 @@ describe('Board', () => {
     expect(wrapper.find('[data-hook="board-cell"]').at(0).text()).to.equal('X');
     wrapper.find('[data-hook="board-cell"]').at(1).simulate('click');
     expect(wrapper.find('[data-hook="board-cell"]').at(1).text()).to.equal('O');
+  });
+});
+
+describe('isGameWon', () => {
+  it('player 1 should win the game', () => {
+    const board = [['X', 'X', 'X'],
+                   [' ', ' ', ' '],
+                   [' ', ' ', ' ']];
+
+    expect(getGameStatus(board)).to.equal('X');
   });
 });

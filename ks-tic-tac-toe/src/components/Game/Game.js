@@ -8,12 +8,13 @@ class Game extends Component {
     this.state = {winner: ''};
   }
   render() {
+    const {player1, player2} = this.props;
     return (
       <div>
-        <span data-hook="player1">{this.props.player1}</span>
-        <span data-hook="player2">{this.props.player2}</span>
-        <Board onGameWon={() => this.setState({winner: true})}/>
-        {this.state.winner && <div data-hook="winner-message">{`${this.props.player1} won!`}</div>}
+        <span data-hook="player1">{player1}</span>
+        <span data-hook="player2">{player2}</span>
+        <Board onGameWon={player => this.setState({winner: player === 'X' ? player1 : player2})}/>
+        {this.state.winner && <div data-hook="winner-message">{`${this.state.winner} won!`}</div>}
       </div>);
   }
 }
